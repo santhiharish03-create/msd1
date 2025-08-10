@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loading-spinner" id="loading-spinner"></div>
+    <div class="container">
+        <h1>Timetable Dashboard</h1>
+        
+        <nav class="navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="section-view.html">Section View</a>
+            <a href="faculty-view.html">Faculty View</a>
+            <a href="room-view.html">Room View</a>
+        </nav>
+
+        <div class="dashboard-cards">
+            <div class="dashboard-card" onclick="window.location.href='section-view.html'">
+                <h2>Section View</h2>
+                <p>View and filter timetables by section</p>
+                <p>Shows faculty and room assignments</p>
+            </div>
+
+            <div class="dashboard-card" onclick="window.location.href='faculty-view.html'">
+                <h2>Faculty View</h2>
+                <p>View faculty schedules</p>
+                <p>Track teaching assignments</p>
+            </div>
+
+            <div class="dashboard-card" onclick="window.location.href='room-view.html'">
+                <h2>Room View</h2>
+                <p>View room occupancy</p>
+                <p>Check room availability</p>
+            </div>
+        </div>
+
+        <div class="dashboard-info">
+            <h3>Quick Stats</h3>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-label">Total Sections:</span>
+                    <span class="stat-value" id="total-sections">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Total Faculty:</span>
+                    <span class="stat-value" id="total-faculty">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Total Rooms:</span>
+                    <span class="stat-value" id="total-rooms">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

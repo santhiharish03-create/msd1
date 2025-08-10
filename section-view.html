@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section Timetable View</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Section Timetable View</h1>
+        
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="section-view.html" class="active">Section View</a>
+            <a href="faculty-view.html">Faculty View</a>
+            <a href="room-view.html">Room View</a>
+        </nav>
+
+        <div class="filter-group">
+            <label for="section">Select Section:</label>
+            <div class="custom-select">
+                <input type="text" id="section-search" placeholder="Search section...">
+                <select id="section">
+                    <option value="">Select Section</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="info-panels">
+            <div id="faculty-list" class="info-panel">
+                <h3>Faculty List</h3>
+                <ul></ul>
+            </div>
+            <div id="room-list" class="info-panel">
+                <h3>Room List</h3>
+                <ul></ul>
+            </div>
+        </div>
+
+        <div class="timetable-container">
+            <table id="timetable">
+                <thead>
+                    <tr>
+                        <th>Day/Period</th>
+                        <th>1st</th>
+                        <th>2nd</th>
+                        <th>3rd</th>
+                        <th>4th</th>
+                        <th>5th</th>
+                        <th>6th</th>
+                        <th>7th</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="no-data-message" class="hidden">No timetable available for this selection.</div>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script type="module" src="js/section-view.js"></script>
+</body>
+</html>
